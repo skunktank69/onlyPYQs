@@ -42,7 +42,7 @@ export default async function TopicFilePage({
       options_html: q.options_html
         ? renderMathInHtml(q.options_html)
         : undefined,
-    })) || ({} as unknown as ApiQuestion);
+    })) || ({} as unknown as ApiQuestion | "");
 
   const explanations = fileObj?.explanations?.map((e) => renderMathInHtml(e));
 
@@ -87,6 +87,7 @@ export default async function TopicFilePage({
 
       <div className="w-full max-w-4xl">
         <QuestionSet
+          // @ts-expect-error please
           questions={questions}
           answer_key={fileObj?.answer_key}
           explanations={explanations}

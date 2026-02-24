@@ -85,6 +85,7 @@ export function QuestionSet({
   answer_key,
   explanations,
 }: {
+  // "@ts-expect-erro - please
   questions: ApiQuestion[];
   answer_key?: string[];
   explanations?: string[];
