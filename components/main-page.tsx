@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { cn } from "@/lib/utils";
 import { Atom, Calculator, FlaskConicalIcon } from "lucide-react";
+import { JSX } from "react/jsx-dev-runtime";
 
 type Card = {
   title: string;
